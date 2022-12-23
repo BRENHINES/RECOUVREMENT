@@ -1,0 +1,208 @@
+:root{
+    --primary: #062138;
+    --secondary: #165081;
+    --transition: #29ABF4;
+    --red: #F54646;
+    --light: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cascadia Code', 'Fira sans', 'sans-serif';
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color:  var(--light);
+    padding: 16px 32px;
+}
+
+H1{
+    color: var(--primary);
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.menu{
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    user-select: none;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.menu span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: var(--primary);
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+
+    transition: 0.3s;
+}
+
+.menu:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: var(--transition);
+}
+
+.menu.active span:nth-child(1){
+    transform: translate(0px, -1px) rotate(45deg);
+}
+
+.menu.active span:nth-child(2){
+    opacity: 0;
+    transform: translate(15px);
+}
+
+.menu.active span:nth-child(3){
+    transform: translate(-2px, -1px) rotate(-45deg);
+}
+
+.menu.active:hover span{
+    background-color: var(--transition);
+}
+
+.mobile{
+    position: fixed;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    min-height: 150px;
+    display: block;
+    z-index: 98;
+    margin-top: 90px;
+    align-items: center;
+    transition: 0.4s;
+    background-color: #e5e9ec;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.mobile.active{
+    left: 0%;
+}
+
+.mobile a{
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px 16px;
+    border-radius: 70px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.nav{
+    display: none;
+    flex: 1 1 5%;
+    justify-content: flex-end;
+    margin: 0;
+
+}
+.nav a{
+    color: var(--primary);
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 4px 10px;
+    border-radius: 99px;
+}
+
+.nav a.active, a:hover{
+    background-color: var(--primary);
+    color: var(--light);
+    transition:ease 0.2s;
+}
+
+@media (min-width: 800px) {
+    .menu{
+        display: none;
+        transition: 3s;
+    }
+
+    .mobile{
+        display: none;
+        transition: 3s;
+    }
+
+    H1{
+        font-size: 170%;
+        transition: 0.5s;
+    }
+
+    .nav{
+        display: flex;
+    }
+}
+
+.Eau{
+    background-color: rgb(184, 195, 218);
+}
+
+.Electricité{
+    background-color: rgb(160, 177, 214);
+}
+
+.card{
+    background-color: #e2e8eb;
+}
+
+#wellcom{
+    background-color: var(--primary);
+}
+
+#register{
+    background-color: rgb(199, 130, 3);
+    height: 650px;
+}
+
+#login{
+    background-color: var(--secondary);
+    height: 650px;
+}
+
+#conte{
+    height: 700px;
+}
+
+.comment{
+    height: 200px;
+}
+
+#az{
+    text-decoration: nome;
+}
+
